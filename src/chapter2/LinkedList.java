@@ -5,9 +5,11 @@ import java.util.Stack;
 
 public class LinkedList<T> {
 
-    private Node root = null;
+    private Node<T> root;
 
-    public LinkedList(Node node){
+    public LinkedList() {this.root = null;}
+
+    public LinkedList(Node<T> node){
         this.root = node;
     }
 
@@ -40,11 +42,13 @@ public class LinkedList<T> {
         System.out.println();
     }
 
-    public Node getRoot() {
+    public Node<T> getRoot() {
         return root;
     }
 
-    public Node getTail() {
+    public void setRoot(Node<T> node){ this.root =node;}
+
+    public Node<T> getTail() {
         Node temp = root;
         while(temp.getNext() != null){
             temp = temp.getNext();

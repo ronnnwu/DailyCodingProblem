@@ -3,6 +3,7 @@ import chapter2.Chapter2;
 
 import chapter2.LinkedList;
 import chapter2.Node;
+import chapter3.Chapter3;
 
 import java.util.List;
 
@@ -84,11 +85,24 @@ public class Main {
 
     }
 
+    public static void testChapter3() {
+        Chapter3 ch = new Chapter3();
+
+        ch.Ex1();
+        ch.Ex2();
+        ch.Ex3();
+        ch.Ex4();
+        ch.Ex5();
+        ch.Ex6();
+
+    }
+
     public static void main(String[] args) {
 
 //        testChapter1();
 
-        testChapter2();
+//        testChapter2();
 
+        testChapter3();
     }
 }
