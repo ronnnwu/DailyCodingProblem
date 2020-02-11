@@ -50,11 +50,19 @@ public class LinkedList<T> {
 
     public Node<T> getTail() {
         Node temp = root;
-        while(temp.getNext() != null){
+        while(temp!= null && temp.getNext() != null){
             temp = temp.getNext();
         }
         return temp;
     }
 
+    public void insertAtEnd(T data) {
+        if (root==null) {
+            root = new Node(data);
+            return;
+        }
+        Node tmp = getTail();
+        tmp.setNext(new Node(data));
+    }
 }
 

@@ -20,4 +20,9 @@ public class MyQueue<T> {
         return data;
     }
 
+    public boolean empty() {
+        return s1.empty();
+
+    }
+
 }

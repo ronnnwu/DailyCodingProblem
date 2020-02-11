@@ -4,6 +4,7 @@ import chapter2.Chapter2;
 import chapter2.LinkedList;
 import chapter2.Node;
 import chapter3.Chapter3;
+import chapter4.Chapter4;
 
 import java.util.List;
 
@@ -86,7 +87,29 @@ public class Main {
     }
 
     public static void testChapter3() {
+
         Chapter3 ch = new Chapter3();
+
+        System.out.println("-------------");
+        System.out.println("Chapter three");
+        System.out.println("-------------");
+
+        ch.Ex1();
+        ch.Ex2();
+        ch.Ex3();
+        ch.Ex4();
+        ch.Ex5();
+        ch.Ex6();
+
+    }
+
+    public static void testChapter4() {
+
+        Chapter4 ch = new Chapter4();
+
+        System.out.println("-------------");
+        System.out.println("Chapter four");
+        System.out.println("-------------");
 
         ch.Ex1();
         ch.Ex2();
@@ -103,6 +126,13 @@ public class Main {
 
 //        testChapter2();
 
-        testChapter3();
+//        testChapter3();
+
+        testChapter4();
+
+
+
+
+
     }
 }
