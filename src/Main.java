@@ -117,7 +117,12 @@ public class Main {
         ch.Ex4();
         ch.Ex5();
         ch.Ex6();
-
+        ch.Ex7();
+        ch.Ex8();
+        ch.Ex9();
+        ch.Ex10();
+        ch.Ex11();
+        ch.Ex12();
     }
 
     public static void main(String[] args) {

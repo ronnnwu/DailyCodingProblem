@@ -1,29 +1,34 @@
 package chapter4;
 
-import chapter2.Node;
 
-public class BinaryNode<T extends Comparable<T>>  {
+public class BinaryNode<T>  {
     private T data;
-    private BinaryNode[] nodes ;
+    private BinaryNode<T> left ;
+    private BinaryNode<T> right ;
+    private int size;
 
     public BinaryNode(T data) {
         this.data = data;
-        this.nodes =  new BinaryNode[2];
-    }
-
-    public BinaryNode(T data, BinaryNode[] nodes) {
-        this.data = data;
-        this.nodes = nodes;
+        this.size = 1;
     }
 
     public T getData() {return data;}
-    public BinaryNode[] getNodes() {return nodes;}
 
-    public void setLeftNodes(BinaryNode node) {
-        nodes[0] = node;
+    public BinaryNode getLeft() {return left;}
+
+    public BinaryNode getRight() {return right;}
+
+    public void setLeft(BinaryNode node) {
+        this.left = node;
     }
 
-    public void setRightNodes(BinaryNode node) {
-        nodes[1] = node;
+    public void setRight(BinaryNode node) {
+        this.right = node;
     }
+
+    public void incrementSize() {
+        size++;
+    }
+
+    public int getSize() {return size;}
 }
