@@ -1,9 +1,6 @@
-# CrackingTheCodingInterview v6
+# Daily Coding Problem by Alex Miller and Lawrence Wu
 
 Finished
 
 #### Data Structures
- - chapter 1
- - chapter 2
- - chapter 3
- - chapter 4
+ - chapter 1 
