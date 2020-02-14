@@ -1,11 +1,12 @@
-import chapter1.Exercise;
+import chapter1.Chapter1;
+import chapter2.Chapter2;
 
 import java.util.Arrays;
 
 public class Main {
 
     public static void testChapter1() {
-        Exercise ex = new Exercise();
+        Chapter1 ex = new Chapter1();
 
         System.out.println("-------------");
         System.out.println("Chapter one");
@@ -20,9 +21,24 @@ public class Main {
 
         System.out.println(Arrays.toString(ex.ex4(new int[]{3, 4, 9, 6, 1})));
 
+
+    }
+
+    public static void testChapter2() {
+        Chapter2 ex = new Chapter2();
+
+        System.out.println("-------------");
+        System.out.println("Chapter two");
+        System.out.println("-------------");
+
+
+        System.out.println(ex.ex1("ab", "abxaba"));
+
+
     }
 
     public static void main(String[] args) {
-        testChapter1();
+//        testChapter1();
+        testChapter2();
     }
 }
