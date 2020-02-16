@@ -4,3 +4,4 @@ Finished
 
 #### Data Structures
  - chapter 1 
+ - chapter 2
