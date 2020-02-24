@@ -5,7 +5,9 @@ import java.util.List;
 public class LinkedList<T> {
     Node<T> root;
 
-    public LinkedList(){}
+    public LinkedList(Node root){
+        this.root = root;
+    }
 
     public LinkedList(List<T> list){
         if (list.size() == 0) return;
@@ -16,6 +18,16 @@ public class LinkedList<T> {
             tmp = tmp.next;
         }
         root = superHead.next;
+    }
+
+    public int getLength() {
+        Node tmp = root;
+        int result = 0;
+        while(tmp!=null) {
+            result ++;
+            tmp = tmp.next;
+        }
+        return result;
     }
 
     @Override
