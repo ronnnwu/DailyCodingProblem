@@ -1,6 +1,5 @@
 # Daily Coding Problem by Alex Miller and Lawrence Wu
-
-Finished
+ 
 
 #### Data Structures
  - chapter 1 
@@ -9,4 +8,9 @@ Finished
  - chapter 4
  - chapter 5
  - chapter 6
- - chapter 7
+ - chapter 7 
+ - chapter 8
+ - chapter 9
+ - chapter 10
+ 
+  
