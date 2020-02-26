@@ -42,6 +42,6 @@ public class DirectGraph<V> extends Graph<V> {
                 dfs(visited, neighbor, result);
             }
         }
-        result.add(v); 
+        result.add(v);
     }
 }

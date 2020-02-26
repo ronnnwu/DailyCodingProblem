@@ -14,3 +14,7 @@
  - chapter 10
  
   
+#### Algorithms
+ - chapter 12
+ - chapter 13
+ - chapter 15 

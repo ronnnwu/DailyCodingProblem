@@ -2,6 +2,9 @@ import chapter1.Chapter1;
 import chapter10.Chapter10;
 import chapter10.DirectGraph;
 import chapter10.UndirectGraph;
+import chapter12.Chapter12;
+import chapter13.Chapter13;
+import chapter15.Chapter15;
 import chapter2.Chapter2;
 import chapter2.Pair;
 import chapter3.Chapter3;
@@ -228,6 +231,54 @@ public class Main {
 
     }
 
+    public static void testChapter12() {
+        Chapter12 ex = new Chapter12();
+
+        System.out.println("-------------");
+        System.out.println("Chapter twelve");
+        System.out.println("-------------");
+
+        ex.ex1(3);
+        System.out.println(ex.ex2(".*at", "chat"));
+        System.out.println(ex.ex3(List.of(4,2,7,5,-1,3,6)));
+        System.out.println(ex.ex3Soln(List.of(4,2,7,5,-1,3,6)));
+
+
+    }
+
+    public static void testChapter13() {
+        Chapter13 ex = new Chapter13();
+
+        System.out.println("-------------");
+        System.out.println("Chapter thirteen");
+        System.out.println("-------------");
+
+        System.out.println(ex.ex1(4));
+        System.out.println(ex.ex1soln(4));
+
+        System.out.println(ex.ex2("111"));
+        System.out.println(ex.ex2soln("111"));
+
+    }
+
+    public static void testChapter15() {
+        Chapter15 ex = new Chapter15();
+
+        System.out.println("-------------");
+        System.out.println("Chapter thirteen");
+        System.out.println("-------------");
+
+        char[] chars = new char[] {'G', 'B', 'R', 'R', 'B', 'R', 'G'};
+        ex.ex1(chars);
+        System.out.println(Arrays.toString(chars));
+
+
+        int[] ints = new int[] {10, 40, 30, 20, 50};
+        ex.ex2(ints);
+        System.out.println(Arrays.toString(ints));
+
+    }
+
     public static void main(String[] args) {
 //        testChapter1();
 //        testChapter2();
@@ -238,7 +289,10 @@ public class Main {
 //        testChapter7();
 //        testChapter8();
 //        testChapter9();
-        testChapter10();
+//        testChapter10();
+//        testChapter12();
+//        testChapter13();
 
+        testChapter15();
     }
 }
