@@ -3,7 +3,6 @@ package chapter6;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Stack;
 
 public class Chapter6 {
     public void ex1(){

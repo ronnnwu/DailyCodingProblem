@@ -1,5 +1,8 @@
 package chapter13;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Chapter13 {
     public int ex1(int n){
         if (n==0) return 0;
@@ -42,4 +45,51 @@ public class Chapter13 {
         }
         return cache[0];
     }
+
+    private int _ex3(int[][] cost, int house, int color) {
+        if (house == cost.length) return 0;
+        int result = Integer.MAX_VALUE;
+        for (int c=0; c<cost[0].length; c++) {
+            if (c != color)
+                result = Math.min(result, cost[house][color] + _ex3(cost, house+1, c));
+        }
+        return result;
+    }
+
+    public int ex3(int[][] cost) {
+        int result = Integer.MAX_VALUE;
+        for (int c=0; c<cost[0].length; c++) {
+            result = Math.min(result, _ex3(cost, 0, c));
+        }
+        return result;
+    }
+
+    public int ex3Soln(int[][] cost) {
+        int n = cost.length;
+        int k = cost[0].length;
+
+        int[] solution = new int[k];
+
+        for (int r =0; r<n; r++) {
+            int[] newRow = new int[k];
+
+            for (int c = 0; c<k; c++) {
+                int min = Integer.MAX_VALUE;
+                for (int j = 0; j<k; j++) {
+                    if (j != c) {
+                        min = Math.min(solution[j]+cost[r][c], min);
+                    }
+                }
+                newRow[c] = min;
+            }
+            solution = newRow;
+        }
+
+        int min = Integer.MAX_VALUE;
+        for (int j = 0; j<k; j++) {
+            min = Math.min(solution[j], min);
+        }
+        return min;
+    }
+
 }

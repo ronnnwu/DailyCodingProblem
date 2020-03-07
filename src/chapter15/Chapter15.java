@@ -38,6 +38,6 @@ public class Chapter15 {
     }
 
     public void ex2(int[] arr){
-        
+
     }
 }

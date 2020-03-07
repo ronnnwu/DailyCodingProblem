@@ -2,6 +2,7 @@ import chapter1.Chapter1;
 import chapter10.Chapter10;
 import chapter10.DirectGraph;
 import chapter10.UndirectGraph;
+import chapter11.Chapter11;
 import chapter12.Chapter12;
 import chapter13.Chapter13;
 import chapter15.Chapter15;
@@ -19,6 +20,7 @@ import chapter7.Chapter7;
 import chapter8.Chapter8;
 import chapter9.Chapter9;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class Main {
@@ -231,6 +233,21 @@ public class Main {
 
     }
 
+
+    public static void testChapter11() throws NoSuchAlgorithmException {
+        Chapter11 ex = new Chapter11();
+
+        System.out.println("-------------");
+        System.out.println("Chapter Eleven");
+        System.out.println("-------------");
+
+        ex.ex1();
+        ex.ex2();
+        ex.ex3();
+
+
+    }
+
     public static void testChapter12() {
         Chapter12 ex = new Chapter12();
 
@@ -259,13 +276,17 @@ public class Main {
         System.out.println(ex.ex2("111"));
         System.out.println(ex.ex2soln("111"));
 
+        int[][] cost = new int[][]{new int[]{1,3,2}, new int[]{2,3,0}};
+        System.out.println(ex.ex3(cost));
+        System.out.println(ex.ex3Soln(cost));
+
     }
 
     public static void testChapter15() {
         Chapter15 ex = new Chapter15();
 
         System.out.println("-------------");
-        System.out.println("Chapter thirteen");
+        System.out.println("Chapter fifteen");
         System.out.println("-------------");
 
         char[] chars = new char[] {'G', 'B', 'R', 'R', 'B', 'R', 'G'};
@@ -279,7 +300,7 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchAlgorithmException {
 //        testChapter1();
 //        testChapter2();
 //        testChapter3();
@@ -290,9 +311,10 @@ public class Main {
 //        testChapter8();
 //        testChapter9();
 //        testChapter10();
+//        testChapter11();
 //        testChapter12();
-//        testChapter13();
+        testChapter13();
 
-        testChapter15();
+//        testChapter15();
     }
 }
