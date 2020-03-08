@@ -7,8 +7,15 @@ import chapter12.Chapter12;
 import chapter13.Chapter13;
 import chapter14.Chapter14;
 import chapter15.Chapter15;
+import chapter16.Chapter16;
+import chapter16.Network;
+import chapter16.Triple;
+import chapter17.Chapter17;
+import chapter18.Chapter18;
+import chapter19.Chapter19;
 import chapter2.Chapter2;
 import chapter2.Pair;
+import chapter20.Chapter20;
 import chapter3.Chapter3;
 import chapter3.LinkedList;
 import chapter4.Chapter4;
@@ -21,7 +28,6 @@ import chapter7.Chapter7;
 import chapter8.Chapter8;
 import chapter9.Chapter9;
 
-import java.lang.reflect.Array;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
@@ -357,6 +363,115 @@ public class Main {
         System.out.println(ex.ex4(new int[]{13,18,25,2,8,10}, 8));
     }
 
+    public static void testChapter16() {
+        Chapter16 ex = new Chapter16();
+
+        System.out.println("-------------");
+        System.out.println("Chapter sixteen");
+        System.out.println("-------------");
+
+        List<Integer> vertices = List.of(0,1,2,3,4,5);
+        List<Triple<Integer, Integer, Integer>> edges = List.of(
+                new Triple<>(0,1,5),
+                new Triple<>(0,2,3),
+                new Triple<>(0,5,4),
+                new Triple<>(1,3,8),
+                new Triple<>(2,3,1),
+                new Triple<>(3,5,10),
+                new Triple<>(3,4,5)
+        );
+
+        System.out.println(ex.ex1(new Network(vertices, edges), 0));
+        System.out.println(ex.ex1Soln(new Network(vertices, edges), 0));
+
+
+        List<String> vertices1 = List.of("USD", "GBP", "INR", "EUR");
+        List<Triple<String, String, Double>> edges1 = List.of(
+                new Triple<>("USD", "GBP", 0.77),
+                new Triple<>("USD", "INR", 71.71),
+                new Triple<>("USD", "EUR", 0.87),
+                new Triple<>("GBP", "USD", 1.3),
+                new Triple<>("GBP", "INR", 93.55),
+                new Triple<>("GBP", "EUR", 1.14),
+                new Triple<>("INR", "USD", 0.014),
+                new Triple<>("INR", "GBP", 0.011),
+                new Triple<>("INR", "EUR", 0.012),
+                new Triple<>("EUR", "USD", 1.14),
+                new Triple<>("EUR", "GBP", 0.88),
+                new Triple<>("EUR", "INR", 81.95)
+                );
+        System.out.println(ex.ex2(new Network(vertices1, edges1)));
+
+        List<Pair<Integer, Integer>> g = List.of(
+                new Pair(0,1),
+                new Pair(0,3),
+                new Pair(1,2));
+
+        int[][] res = ex.ex3(new DirectGraph(g));
+        for (int i=0; i<res.length; i++) {
+            for (int j=0; j<res.length; j++) {
+                System.out.print(res[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public static void testChapter17() {
+        Chapter17 ex = new Chapter17();
+
+        System.out.println("-------------");
+        System.out.println("Chapter seventeen");
+        System.out.println("-------------");
+
+
+        System.out.println(ex.ex1(new int[]{6,1,3,3,3,6,6}));
+    }
+
+    public static void testChapter18() {
+        Chapter18 ex = new Chapter18();
+
+        System.out.println("-------------");
+        System.out.println("Chapter eighteen");
+        System.out.println("-------------");
+
+        List<Triple<Character, Character, Double>> markovChain = List.of(
+                new Triple('a', 'a', 0.9),
+                new Triple('a', 'b', 0.075),
+                new Triple('a', 'c', 0.025),
+                new Triple('b', 'a', 0.15),
+                new Triple('b', 'b', 0.8),
+                new Triple('b', 'c', 0.05),
+                new Triple('c', 'a', 0.25),
+                new Triple('c', 'b', 0.25),
+                new Triple('c', 'c', 0.5)
+        );
+
+        System.out.println(ex.ex3(markovChain, 'a', 5000));
+    }
+
+    public static void testChapter19() {
+        Chapter19 ex = new Chapter19();
+
+        System.out.println("-------------");
+        System.out.println("Chapter nineteen");
+        System.out.println("-------------");
+
+
+        ex.ex1();
+    }
+
+    public static void testChapter20() {
+        Chapter20 ex = new Chapter20();
+
+        System.out.println("-------------");
+        System.out.println("Chapter twenty");
+        System.out.println("-------------");
+
+
+        ex.ex1();
+    }
+
     public static void main(String[] args) throws NoSuchAlgorithmException {
 //        testChapter1();
 //        testChapter2();
@@ -372,6 +487,11 @@ public class Main {
 //        testChapter12();
 //        testChapter13();
 //        testChapter14();
-        testChapter15();
+//        testChapter15();
+//        testChapter16();
+//        testChapter17();
+//        testChapter18();
+//        testChapter19();
+        testChapter20();
     }
 }

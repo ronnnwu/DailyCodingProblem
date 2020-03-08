@@ -1,11 +1,7 @@
 package chapter10;
 
-import chapter4.Queue;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Graph<V> {
 
@@ -27,6 +23,14 @@ public class Graph<V> {
         return false;
     }
 
+    public Map<V, List<V>> getAdjacencyList() {return adjacencyList;};
+    public Set<V> getVertices() {
+        HashSet hashSet = new HashSet(adjacencyList.keySet());
+        for(List<V> values: adjacencyList.values()){
+            hashSet.addAll(values);
+        }
+        return hashSet;
+    }
 
     public boolean isCyclic(){
         Set<V> visited = new HashSet();
@@ -37,5 +41,10 @@ public class Graph<V> {
             }
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return adjacencyList.toString();
     }
 }
