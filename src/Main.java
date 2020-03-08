@@ -5,6 +5,7 @@ import chapter10.UndirectGraph;
 import chapter11.Chapter11;
 import chapter12.Chapter12;
 import chapter13.Chapter13;
+import chapter14.Chapter14;
 import chapter15.Chapter15;
 import chapter2.Chapter2;
 import chapter2.Pair;
@@ -20,6 +21,7 @@ import chapter7.Chapter7;
 import chapter8.Chapter8;
 import chapter9.Chapter9;
 
+import java.lang.reflect.Array;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
@@ -282,6 +284,58 @@ public class Main {
 
     }
 
+    private static void printSudoku(int[][] sudoku) {
+        for (int i =0; i<9; i++) {
+            System.out.println();
+            if (i%3==0)
+                System.out.println("--------------------");
+            for (int j=0; j<9; j++) {
+                if (j%3==0) {
+                    System.out.print("|");
+                }
+                System.out.print(sudoku[i][j]+" ");
+            }
+        }
+
+        System.out.println();
+    }
+
+    public static void testChapter14() {
+        Chapter14 ex = new Chapter14();
+
+        System.out.println("-------------");
+        System.out.println("Chapter fourteen");
+        System.out.println("-------------");
+
+        List<Pair<String, String>> flights = new ArrayList<>();
+        flights.add(new Pair<>("SFO", "HKO"));
+        flights.add(new Pair<>("YYZ", "SFO"));
+        flights.add(new Pair<>("YUL", "YYZ"));
+        flights.add(new Pair<>("HKO", "ORD"));
+
+        System.out.println(ex.ex1(flights, "YUL"));
+
+        int[][] sudoku = new int[][]{
+                new int[] {2,5,0,0,3,0,9,0,1},
+                new int[] {0,1,0,0,0,4,0,0,0},
+                new int[] {4,0,7,0,0,0,2,0,8},
+                new int[] {0,0,5,2,0,0,0,0,0},
+                new int[] {0,0,0,0,9,8,1,0,0},
+                new int[] {0,4,0,0,0,3,0,0,0},
+                new int[] {0,0,0,3,6,0,0,7,2},
+                new int[] {0,7,0,0,0,0,0,0,3},
+                new int[] {9,0,3,0,0,0,6,0,4}
+        };
+
+        printSudoku(sudoku);
+        int[][] soln = ex.ex2(sudoku);
+        printSudoku(soln);
+
+        System.out.println(ex.ex3(3));
+
+
+    }
+
     public static void testChapter15() {
         Chapter15 ex = new Chapter15();
 
@@ -298,6 +352,9 @@ public class Main {
         ex.ex2(ints);
         System.out.println(Arrays.toString(ints));
 
+        System.out.println(Arrays.toString(ex.ex3(new int[]{4, 100, 54, 537, 2, 89}, 3)));
+
+        System.out.println(ex.ex4(new int[]{13,18,25,2,8,10}, 8));
     }
 
     public static void main(String[] args) throws NoSuchAlgorithmException {
@@ -313,8 +370,8 @@ public class Main {
 //        testChapter10();
 //        testChapter11();
 //        testChapter12();
-        testChapter13();
-
-//        testChapter15();
+//        testChapter13();
+//        testChapter14();
+        testChapter15();
     }
 }
